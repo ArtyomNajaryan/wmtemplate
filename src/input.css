@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mtop-40 {
+    margin-top:-33px;
+  }
+}

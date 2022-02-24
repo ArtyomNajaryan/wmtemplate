@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="language-php h-full w-full font-sans  text-gray-900 ">
+    <header>
+    <nav class="bg-white-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <div class=" inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only color-red-200">Open main menu</span>
+                <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex-1 flex items-center justify-between">
+              <div class="flex-shrink-0 flex items-center">
+               <a href="index.html"><img class="block lg:hidden h-8 w-auto" src="img/logo.svg" alt="Workflow"></a>
+                <a href="index.html"><img class="hidden lg:block h-8 w-auto" src="img/logo_grad.svg" alt="Workflow"></a>
+              </div>
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex justify-center	 space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="services.html" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium hover:text-gray-600" >Ծառայություններ</a>
+                  <a href="portfolio.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Պորտֆոլիո</a>
+                  <a href="about.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Մեր մասին</a>
+                  <a href="blog.html" class="text-gray-300 border-x-fuchsia-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium "> Բլոգ</a>
+                  <a href="contuct.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Կապ</a>
+                </div>
+              </div>
+    
+              <div class="flex">
+              <button type="button" class="bg-red-600 border-2 border-red-600 hover:bg-white hover:border-red-600 hover:text-red-600 transition duration-300 ease-in-out text-white px-4 py-2 rounded-md text-sm font-medium">
+                <span>Order service</span>
+              </button>
+    
+              <!-- Profile dropdown -->
+              <div class="ml-3 relative">
+                <div>
+                  <button type="button" id="LangMenuToggle" class="bg-white px-3 py-2 align-center flex text-sm rounded-md focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-200 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <span class="flex">Eng
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div id="LangMenu" class="hidden transition duration-300 ease-in-out origin-top-right  absolute right-0 mt-2 w-20 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                  <a href="#" class="block text-center px-4 py-2 text-sm text-gray-800 hover:text-gray-700" role="menuitem" tabindex="-1">Հայ</a>
+                  <a href="#" class="block text-center px-4 py-2 text-sm text-gray-800 hover:text-gray-700" role="menuitem" tabindex="-1">Рус</a>
+                </div>
+              </div>
+    
+            </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 justify-center">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+    <!-- Blog Start -->
+<section >
+
+  <div class="container max-w-screen-xl mx-auto">
+     <h2 class="text-center font-bold text-4xl text-gray-900 py-8">Our blog</h2>
+     <div class="text-center  md:ml-10 md:pr-4 md:space-x-8 mb-8">
+      <a href="#" class=" text-gray-500 hover:text-gray-900">Product</a>
+      <a href="#" class=" text-gray-500 hover:text-gray-900">Features</a>
+      <a href="#" class=" text-gray-500 hover:text-gray-900">Marketplace</a>
+      <a href="#" class=" text-gray-500 hover:text-gray-900">Company</a>
+      <a href="#" class=" text-indigo-600 hover:text-indigo-500">Log in</a>
+    </div>
+  </div>
+
+<div class="bg-gray-50	">
+  <div class="container max-w-screen-xl mx-auto">
+       <div class="flex justify-between  p-8 py-14 ">
+       <!-- Left Part -->
+        <div class=" w-2/3	">
+          <div class="">
+            <h2 class=" font-bold text-4xl text-gray-900 ">Նկարների չափերը 9 սոցիալական էջերում</h2>
+            <img class="w-full my-16" src="https://webmagnet.org/images/blog/socialmediamarceting%20(1).jpg" alt="">
+          </div>
+        
+
+          <div class="mt-5">
+            <h2 class=" font-bold text-lg text-gray-900">Facebook</h2>
+            <ul>
+              <li >Արտաքին հղման նկար՝ 1200 x 630 px</li>
+              <li>Գրառման նկար՝ 1200 x 630 px</li>
+              <li>Եթնանկար՝ 820 х 312 px</li>
+            </ul>
+          </div>
+
+          <div class="mt-5">
+            <h2 class=" font-bold text-lg text-gray-900">Facebook</h2>
+            <ul>
+              <li >Արտաքին հղման նկար՝ 1200 x 630 px</li>
+              <li>Գրառման նկար՝ 1200 x 630 px</li>
+              <li>Եթնանկար՝ 820 х 312 px</li>
+            </ul>
+          </div>
+
+
+          <div class="mt-5">
+            <h2 class=" font-bold text-lg text-gray-900">Facebook</h2>
+            <ul>
+              <li >Արտաքին հղման նկար՝ 1200 x 630 px</li>
+              <li>Գրառման նկար՝ 1200 x 630 px</li>
+              <li>Եթնանկար՝ 820 х 312 px</li>
+            </ul>
+          </div>
+
+          <div class="mt-5 ">
+            <h2 class=" font-bold text-lg text-gray-900">Facebook</h2>
+            <ul>
+              <li >Արտաքին հղման նկար՝ 1200 x 630 px</li>
+              <li>Գրառման նկար՝ 1200 x 630 px</li>
+              <li>Եթնանկար՝ 820 х 312 px</li>
+            </ul>
+          </div>
+
+
+          <div class="mt-10 flex justify-between">
+            <div class="flex ">
+              <span><i class="fa-solid fa-bookmark px-1"></i></span>
+              <a href="#"  class="px-2">UX Design</a>
+              <a href="#">Marketing</a>
+            </div>
+
+            <div class="flex">
+              <span><a href="#"><i class="fa-brands fa-facebook-square px-1 text-2xl hover:text-blue-900"></i></a></span>
+              <span><a href="#"><i class="fa-brands fa-twitter px-1 text-2xl hover:text-blue-500"></i></a></span>
+              <span><a href="#"><i class="fa-brands fa-linkedin px-1 text-2xl hover:text-blue-900"></i></a></span>
+            </div>
+          </div>
+      
+        </div>
+      <!-- Left Part  End -->
+      <!-- Right Part Start -->
+        <div class=" w-1/4 drop-shadow-2xl h-auto self-start bg-white px-8 py-10  rounded-2xl ">
+          <h2 class="text-xl font-bold">Ծառայություններ</h2>
+          <ul class="mt-3">
+            <li><a class="mt-2 font-bold " href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold " href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+            <li><a class="mt-2 font-bold" href="#">Կորպորատիվ կայքեր</a></li>
+          </ul>
+        </div>
+      <!-- Right Part End -->
+       </div>
+ 
+    </div>
+</div>
+</section>
+
+
+    
+    <!-- Footer Start -->
+
+    <footer class="bg-gray-900">
+      <div class=" container pt-16 pb-2 items-center max-w-screen-xl mx-auto">
+          <div class="flex justify-between pb-16">
+              
+           <div class="max-w-[200px] ">
+               <img src="https://webmagnet.org/images/logo/webmagnet.svg" alt="img">
+               <p class="text-white text-sm mt-5">Lorem ipsum dolor sit amet, elit adipisicing consectetur .</p>
+           </div>
+
+           <div class="w-1/2 flex justify-between">
+
+               <div class="text-white font-medium">
+                   <h2 class="text-xl">Section</h2>
+                   <ul class="text-lg">
+                       <li>text</li>
+                       <li>text</li>
+                       <li>text</li>
+                       <li>text</li>
+                   </ul>
+               </div>
+
+               <div class="text-white font-medium">
+                   <h2 class="text-xl">Section</h2>
+                   <ul class="text-lg">
+                       <li>text</li>
+                       <li>text</li>
+                       <li>text</li>
+                       <li>text</li>
+                   </ul>
+               </div>
+
+               <div class="text-white font-medium ">
+                   <h2 class="text-xl">Section</h2>
+                   <ul class="text-lg">
+                       <li>text</li>
+                       <li>text</li>
+                       <li>text</li>
+                       <li>text</li>
+                   </ul>
+               </div>
+           </div>
+
+          </div>
+
+          <div class="mt-5 border-t-2 border-white flex justify-between">
+           <div>
+               <a href="#"><p class="text-white">Copyright @ 2021 Webmagnet. All rights reserved</p></a>
+           </div>
+
+           <div>
+               <ul class="flex text-white">
+                   <li>
+                       <a href="#">Terms & Conditions</a>
+                   </li>
+                   <li>
+                       <a href="#">Privacy Policy</a>
+                   </li>
+                   <li>
+                       <a href="#">Hy</a>
+                   </li>
+                   <li>
+                       <a href="#">Rus</a>
+                   </li>
+                   <li>
+                       <a href="#">Eng</a>
+                   </li>
+               </ul>
+           </div>
+          </div>
+
+      </div>
+   </footer>
+
+   <!-- Footer End -->
+   <script src="./script.js"></script>
+</body>
+
+</html>
