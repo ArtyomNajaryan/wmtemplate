@@ -14,3 +14,23 @@ function wmportfolio() {
 
   }
 
+
+  
+  
+  function wmLanguage(){
+    let x = document.getElementById("LangMenu");
+    if (x.style.display === "none") {
+      x.style.display = "inline";
+    } else {
+      x.style.display = "none";
+    }
+  }
+ 
+  function mobileMenu(){
+    let x = document.getElementById("mobile-menu");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
