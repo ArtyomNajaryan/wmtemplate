@@ -49,7 +49,6 @@
               <!-- Profile dropdown -->
               <div class="ml-3 flex relative">
 
-
                 <button type="button" id="LangMenuToggle"
                   class=" hidden sm:hidden md:hidden lg:block  wm-lang-btn bg-white px-3 py-2 align-center flex text-sm rounded-md focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-offset-gray-200 focus:ring-white"
                   id="user-menu-button">
@@ -64,7 +63,7 @@
 
 
                 <div id="LangMenu"
-                  class="hidden transition duration-300 ease-in-out origin-top-right  absolute right-0 mt-2 w-20 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  class="hidden transition duration-300 ease-in-out origin-top-right  absolute top-8 right-0 mt-2 w-20 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
                   <a href="#" class="block text-center px-4 py-2 text-sm text-gray-800 hover:text-gray-700"
                     role="menuitem" tabindex="-1">Հայ</a>
@@ -74,7 +73,7 @@
 
                 <div class=" inset-y-0 left-0 flex items-center sm:block md:block lg:hidden">
                   <!-- Mobile menu button-->
-                  <button onclick="mobileMenu()" type="button"
+                  <button type="button" id="menuToggle"
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only color-red-200">Open main menu</span>
@@ -97,30 +96,25 @@
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 justify-center">
+      <div
+        class="hidden bg-gray-900 mx-4 rounded-2xl opacity-50 transition duration-800 ease-in-out absolute text-center left-0 right-0 top-10 text-white shadow-lg shadow-gray-600/40 "
+        id="mobile-menu">
+        <div class="px-2 pt-6 pb-3 space-y-1 justify-center">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="services.html"
-            class="text-gray-900 hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium"
+          <a href="services.html" class=" block px-3 py-2 rounded-md text-base font-medium"
             aria-current="page">Ծառայություններ</a>
-          <a href="portfolio.html"
-            class="text-gray-900 hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Պորտֆոլիո</a>
-          <a href="about.html"
-            class="text-gray-900 hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Մեր մասին</a>
-          <a href="blog.html"
-            class="text-gray-900 hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Բլոգ</a>
-          <a href="contact.html"
-            class="text-gray-900 hover:text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Կապ</a>
-          <ul class="flex text-center">
+          <a href="portfolio.html" class=" block px-3 py-2 rounded-md text-base font-medium">Պորտֆոլիո</a>
+          <a href="about.html" class="  block px-3 py-2 rounded-md text-base font-medium">Մեր
+            մասին</a>
+          <a href="blog.html" class="  block px-3 py-2 rounded-md text-base font-medium">Բլոգ</a>
+          <a href="contact.html" class="  block px-3 py-2 rounded-md text-base font-medium">Կապ</a>
+          <ul class="pt-5 flex  justify-center">
             <li>
-              <a href="#" class="block text-center px-4 py-2 text-sm text-gray-700 hover:text-gray-300 font-medium"
-                role="menuitem" tabindex="-1">Հայ</a>
+              <a href="#" class=" px-4 py-2 text-sm text-gray-200 font-medium" role="menuitem" tabindex="-1">Հայ</a>
             </li>
-            <li><a href="#" class="block text-center px-4 py-2 text-sm text-gray-700 hover:text-gray-300 font-medium"
-                role="menuitem" tabindex="-1">Rus</a>
+            <li><a href="#" class=" px-4 py-2 text-sm text-gray-200  font-medium" role="menuitem" tabindex="-1">Rus</a>
             </li>
-            <li><a href="#" class="block text-center px-4 py-2 text-sm text-gray-700 hover:text-gray-300 font-medium"
-                role="menuitem" tabindex="-1">Eng</a>
+            <li><a href="#" class=" px-4 py-2 text-sm text-gray-200  font-medium" role="menuitem" tabindex="-1">Eng</a>
             </li>
           </ul>
         </div>
@@ -580,15 +574,16 @@
 
       </div>
 
-      <div class="mt-5 border-t-2 border-white sm:flex md:flex  lg:flex justify-between">
-        <div>
+      <div class="mt-5 border-t-2 opacity-50  sm:flex md:flex  lg:flex justify-between">
+
+        <div class="mt-5">
           <a href="#">
             <p class="text-white">Copyright @ 2021 Webmagnet. All rights reserved</p>
           </a>
         </div>
 
-        <div>
-          <ul class="flex text-white">
+        <div class="mt-5">
+          <ul class="flex   text-white">
             <li>
               <a href="#">Terms & Conditions</a>
             </li>
