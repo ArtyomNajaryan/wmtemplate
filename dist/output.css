@@ -520,6 +520,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0;
 }
 
+.visible{
+  visibility: visible;
+}
+
 .absolute{
   position: absolute;
 }
@@ -935,11 +939,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-purple-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
-}
-
 .bg-slate-50{
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
@@ -1256,11 +1255,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(79 70 229 / var(--tw-text-opacity));
 }
 
-.text-rose-700{
-  --tw-text-opacity: 1;
-  color: rgb(190 18 60 / var(--tw-text-opacity));
-}
-
 .antialiased{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1544,6 +1538,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 66.666667%;
   }
 
+  .sm\:w-1\/4{
+    width: 25%;
+  }
+
   .sm\:max-w-4xl{
     max-width: 56rem;
   }
@@ -1611,6 +1609,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .sm\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 
@@ -1690,6 +1693,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-1\/2{
     width: 50%;
+  }
+
+  .md\:w-1\/4{
+    width: 25%;
   }
 
   .md\:max-w-xs{
@@ -1785,6 +1792,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px){
+  .lg\:invisible{
+    visibility: hidden;
+  }
+
   .lg\:my-28{
     margin-top: 7rem;
     margin-bottom: 7rem;
