@@ -16,7 +16,7 @@ function wmportfolio() {
 
 
   
-  
+  document.getElementsById('LangMenuToggle').addEventListener('click',wmLanguage)
   function wmLanguage(){
     let x = document.getElementById("LangMenu");
     if (x.style.display === "none") {
