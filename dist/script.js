@@ -37,13 +37,25 @@ if (elmnt == "mobile-menu") {
 
 
   
-  document.body.addEventListener ('click',wmLanguages)
-  function wmLanguages(){
-    let x = document.getElementById("LangMenu");
-    let y = document.getElementById("LangMenuToggle");
+document.addEventListener('click', function(e) {
+  var bodyclick = document.getElementById('LangMenuToggle');
 
-    if (x.style.display == y.style.display) {
-      x.style.display = "hidden";
-    } 
+  if (!bodyclick.contains(e.target)) {
+    if(document.getElementById("LangMenu").classList != 'hidden'){
+      document.getElementById("LangMenu").classList.add("hidden");
+    }
+  
   }
- 
+});
+
+document.addEventListener('click', function(e) {
+  var bodyclick = document.getElementById('menuToggle');
+
+  if (!bodyclick.contains(e.target)) {
+    if(document.getElementById("mobile-menu").classList != 'hidden'){
+      document.getElementById("mobile-menu").classList.add("hidden");
+    }
+  
+  }
+});
+
